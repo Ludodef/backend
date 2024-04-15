@@ -16,8 +16,6 @@ public class Main {
     public static String concat( String str, int num){
         return str + num;
     }
-    public static String[] inserisciInArray (String[] stringArray, String str){
 
-    }
 
 }
