@@ -2,6 +2,10 @@ package esercizio;
 
 public class Main2 {
 
+
+        public static void main(String[] args){
+            System.out.println(stampaNumero(3));
+        }
     public static String stampaNumero(int num){
         String risultato;
         switch (num){
@@ -25,5 +29,6 @@ public class Main2 {
             default:
                 risultato = "ERRORE";
         }
+        return risultato;
     }
 }
