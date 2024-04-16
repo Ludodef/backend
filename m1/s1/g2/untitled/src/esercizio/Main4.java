@@ -6,7 +6,7 @@ public class Main4 {
 
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Inserire un numero seguito dal tasto Invio");
+        System.out.println("Fai partire il countdown digitando un numero");
         int test = scan.nextInt();
         countdown(test);
         scan.close();
