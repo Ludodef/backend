@@ -1,14 +1,18 @@
 package it.player.multimedia;
 
 public abstract class Playable extends Multimedia implements Riproduzione {
+    //classe astratta genitore per video e audio
+    //implementazione dell'interfaccia Riproduzione ed estende Multimedia
+
+    //impostazione variabili
     private int duration;
     private int volume = 5;
 
+
+    //metodi GET E SET
     public int getVolume() {
         return volume;
     }
-
-
 
     public int getDuration() {
         return duration;
@@ -19,7 +23,7 @@ public abstract class Playable extends Multimedia implements Riproduzione {
     }
 
 
-
+    //metodi di riproduzione esportati dall'interfaccia Riproduzione e definiti
     @Override
     public void alzaVolume() {
         if(volume < 10){

@@ -2,6 +2,10 @@ package it.player.multimedia;
 
 public class Audio extends Playable{
 
+    //implementazione della classe Playable per esportare i suoi metodi
+
+
+    //Costruttore di audio
     public Audio(String titolo, int durata){
 
         this.setTitle(titolo);

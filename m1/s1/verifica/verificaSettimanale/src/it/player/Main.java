@@ -5,21 +5,25 @@ import it.player.multimedia.Immagine;
 import it.player.multimedia.Video;
 
 public class Main {
+
+    //CLASSE GENITORE PER LA PROVA DEI VARI METODI
+
     public static void main(String[] args) {
 
-        Video prova = new Video("prova",10);
-        prova.diminuisciLuminosita();
-        prova.alzaVolume();
-        prova.play();
+        //Prova creazione,impostazione luminosita'  e modifica del volume del video
+        Video prova = new Video("prova",10); //creazione video
+        prova.diminuisciLuminosita(); //diminuisci luminosita'
+        prova.alzaVolume(); //alza volume
+        prova.play(); //avvio video
 
-        Audio prova2 = new Audio("prova2",10);
-        prova2.alzaVolume();
-        prova2.play();
+        //Prova creazione,modifica del volume dell'audio
+        Audio prova2 = new Audio("prova2",10); //creazione audio
+        prova2.alzaVolume(); //aumento volume
+        prova2.play(); //avvio audio
 
-        Immagine prova3 = new Immagine("prova3");
-
-        prova3.aumentaLuminosita();
-        prova3.show();
+        Immagine prova3 = new Immagine("prova3"); //creazione immagine
+        prova3.aumentaLuminosita(); //aumento luminosita'
+        prova3.show(); //mostra immagine
 
     }
 }

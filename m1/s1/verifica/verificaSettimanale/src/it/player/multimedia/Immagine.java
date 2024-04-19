@@ -1,6 +1,7 @@
 package it.player.multimedia;
 
 public class Immagine extends Multimedia implements Visualizzazione{
+    //classe immagine che estende Multimedia e implementa Visualizzazione(interfaccia)
 
     private int luminosita = 5;
 
@@ -17,7 +18,7 @@ public class Immagine extends Multimedia implements Visualizzazione{
 
 
 
-
+    //metodo show che ci permette di visualizzare l'immagine
     public void show(){
         System.out.print(this.getTitle() + "-");
         for (int i = 0; i < this.getLuminosita();i++){
@@ -27,7 +28,7 @@ public class Immagine extends Multimedia implements Visualizzazione{
 
     }
 
-
+    //metodi per la luminosita' esportati dall'interfaccia Visualizzazione e definiti
     @Override
     public void aumentaLuminosita() {
         if(luminosita < 10){

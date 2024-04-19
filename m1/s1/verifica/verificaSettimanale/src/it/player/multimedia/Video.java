@@ -1,6 +1,8 @@
 package it.player.multimedia;
 
 public class Video extends Playable implements Visualizzazione {
+    //implementazione della classe Playable e implementazione dell'interfaccia Visualizzazione
+
     private int luminosita = 5;
 
     public int getLuminosita() {
@@ -8,14 +10,14 @@ public class Video extends Playable implements Visualizzazione {
     }
 
 
-
+    //costruttore di video
     public Video(String titolo, int durata){
 
         this.setTitle(titolo);
         this.setDuration(durata);
 
     }
-
+    //definizione dei vari metodi importati
     @Override
     public void play(){
         for (int i = 0; i < this.getDuration(); i++) {

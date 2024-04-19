@@ -2,6 +2,8 @@ package it.player.multimedia;
 
 public abstract class Multimedia {
 
+    //classe astratta Multimedia(genitore)
+
     private String title;
 
     public String getTitle() {
