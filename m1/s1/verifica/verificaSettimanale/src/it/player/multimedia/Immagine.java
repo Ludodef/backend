@@ -2,16 +2,19 @@ package it.player.multimedia;
 
 public class Immagine extends Multimedia implements Visualizzazione{
 
-    private int luminosita;
+    private int luminosita = 5;
+
+    public Immagine(String titolo){
+        this.setTitle(titolo);
+
+    }
 
 
     public int getLuminosita() {
         return luminosita;
     }
 
-    public void setLuminosita(int luminosita) {
-        this.luminosita = luminosita;
-    }
+
 
 
 
@@ -27,7 +30,7 @@ public class Immagine extends Multimedia implements Visualizzazione{
 
     @Override
     public void aumentaLuminosita() {
-        if(luminosita < 100){
+        if(luminosita < 10){
             luminosita++;
         }else {
             System.out.println("Luminosità massima");

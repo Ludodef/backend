@@ -2,15 +2,13 @@ package it.player.multimedia;
 
 public abstract class Playable extends Multimedia implements Riproduzione {
     private int duration;
-    private int volume;
+    private int volume = 5;
 
     public int getVolume() {
         return volume;
     }
 
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
+
 
     public int getDuration() {
         return duration;
@@ -24,12 +22,20 @@ public abstract class Playable extends Multimedia implements Riproduzione {
 
     @Override
     public void alzaVolume() {
-
+        if(volume < 10){
+            volume++;
+        }else {
+            System.out.println("Volume massimo");
+        }
     }
 
     @Override
     public void diminuisciVolume() {
-
+        if(volume > 0){
+            volume--;
+        }else {
+            System.out.println("Volume minimo");
+        }
     }
 
     @Override
