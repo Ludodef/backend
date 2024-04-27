@@ -30,4 +30,12 @@ public class Libri extends Composizione{
     public void setGenere(String genere) {
         this.genere = genere;
     }
+
+    @Override
+    public String toString() {
+        return "Libri{" +
+                "autore='" + autore + '\'' +
+                ", genere='" + genere + '\'' +
+                '}';
+    }
 }

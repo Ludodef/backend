@@ -19,4 +19,11 @@ public class Riviste extends Composizione{
     public void setUscita(Uscita uscita) {
         this.uscita = uscita;
     }
+
+    @Override
+    public String toString() {
+        return "Riviste{" +
+                "uscita=" + uscita +
+                '}';
+    }
 }
