@@ -16,6 +16,7 @@ public class Main {
 
         libreria.addUscita(new Libri(123456789L, "Guida galattica per autostoppisti", 1979, 189,"Douglas Adams","fantascenza"));
         libreria.addUscita(new Riviste(987654321L,"Come prendersi cura del giardino",2023,100, Uscita.SEMESTRALE));
+        libreria.addUscita(new Riviste(1254158566L,"Corriere della sera",2024,10, Uscita.SETTIMANALE));
         libreria.addUscita(new Libri(456789321L, "Uno stupido libro", 1979, 200,"Pinco Pallino","satira"));
         libreria.save();
 

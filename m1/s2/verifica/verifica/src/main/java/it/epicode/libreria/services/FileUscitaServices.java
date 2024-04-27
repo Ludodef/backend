@@ -110,11 +110,6 @@ public class FileUscitaServices implements UsciteService {
     }
 
     @Override
-    public void removeUscita(Composizione u) {
-
-    }
-
-    @Override
     public List<Composizione> getUsc() {
         return List.of();
     }
