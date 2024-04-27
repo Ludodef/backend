@@ -17,6 +17,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class FileUscitaServices implements UsciteService {
     private static final Logger logger = LoggerFactory.getLogger(FileUscitaServices.class);
@@ -27,6 +28,25 @@ public class FileUscitaServices implements UsciteService {
         load();
     }
 
+    public void rimuovidaISBN(Long ISBN){
+        uscite.removeIf(u ->u.getISBN().equals(ISBN));
+    }
+    public List<Composizione> cercaConISBN(Long ISBN){
+       return uscite.stream()
+                .filter(a -> a.getISBN().equals(ISBN))
+                .collect(Collectors.toList());
+    }
+    public List<Composizione> cercaConAnno(int anno){
+        return uscite.stream()
+                .filter(a -> a.getAnno() == anno)
+                .collect(Collectors.toList());
+    }
+
+    public List<Composizione> cercaConAutore(String autore){
+        return uscite.stream()
+                .filter(a -> a instanceof Libri && ((Libri)a).getAutore().equals(autore))
+                .collect(Collectors.toList());
+    }
 
     public void save() {
         File f = new File(STORAGE);

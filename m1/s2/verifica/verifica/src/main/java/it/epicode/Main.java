@@ -19,37 +19,25 @@ public class Main {
         libreria.addUscita(new Libri(456789321L, "Uno stupido libro", 1979, 200,"Pinco Pallino","satira"));
         libreria.save();
 
-        Long ISBNToSearch = 987654321L;
-        int yearToSearch = 1979;
-        String authorToSearch = "Pinco Pallino";
+        Long ISBNCercato = 987654321L;
+        int annoCercato = 1979;
+        String autoreCercato = "Pinco Pallino";
+
+        var cercaISBN = libreria.cercaConISBN(ISBNCercato);
+        var cercaAnno = libreria.cercaConAnno(annoCercato);
+        var cercaAutore = libreria.cercaConAutore(autoreCercato);
+
+        //eliminazione libro
+        libreria.rimuovidaISBN(ISBNCercato);
+        libreria.save();
 
 
-      /*  var cercaISBN = libreria.stream()
-                .filter(a -> a.getISBN().equals(ISBNToSearch))
-                .toList();
+        cercaISBN.forEach(a -> System.out.println("L'articolo selezionato e' " + a.getTitolo() + " con ISBN " + ISBNCercato));
 
-        var cercaAnno = libreria.stream()
-                .filter(a -> a.getAnno() == yearToSearch)
-                .toList();
-
-        var cercaAutore = libreria.stream()
-                .filter(a -> a instanceof Libri && ((Libri)a).getAutore().equals(authorToSearch))
-                .toList();
-
-            //eliminazione del libro/rivista tramite isbn
-            libreria.removeIf(a ->a.getISBN().equals(ISBNToSearch));
-
-
-
-
-
-        cercaISBN.forEach(a -> System.out.println("L'articolo selezionato e' " + a.getTitolo() + " con ISBN " + ISBNToSearch));
-
-        cercaAnno.forEach(a -> System.out.println("L'articolo selezionato e' " + a.getTitolo() + " pubblicato il " + yearToSearch));
+        cercaAnno.forEach(a -> System.out.println("L'articolo selezionato e' " + a.getTitolo() + " pubblicato il " + annoCercato));
         cercaAutore.forEach(a -> System.out.println("L'articolo selezionato e' " + a.getTitolo()));
 
 
-       */
     }
 
 

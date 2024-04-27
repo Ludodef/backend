@@ -9,4 +9,6 @@ public interface UsciteService {
     void addUscita(Composizione u);
     void removeUscita(Composizione u);
     List<Composizione> getUsc();
+
+
 }
