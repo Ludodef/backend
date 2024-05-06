@@ -1,4 +1,4 @@
-package org.example;
+package org.example.library.entities;
 
 public enum Periodicity {
     SETTIMANALE,
