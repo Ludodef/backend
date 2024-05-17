@@ -25,5 +25,5 @@ public class Preservation {
     @ManyToOne
     @JoinColumn(name = "workstation_id")
     private Workstation workstation;
-    private LocalDate data;
+    private LocalDate date;
 }

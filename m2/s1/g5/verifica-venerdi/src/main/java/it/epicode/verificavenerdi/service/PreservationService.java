@@ -30,7 +30,7 @@ public class PreservationService {
         Preservation preservation = new Preservation();
         preservation.setUser(user);
         preservation.setWorkstation(workstation);
-        preservation.setData(date);
+        preservation.setDate(date);
 
         return(PreservationRepository) preservationRepository.save(preservation);
     }
