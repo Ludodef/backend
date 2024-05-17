@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "building")
 @Builder(setterPrefix = "with")
 public class Building {
     @Id
