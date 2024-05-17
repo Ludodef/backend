@@ -1,26 +1,24 @@
 package it.epicode.verificavenerdi.data;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 
-@EqualsAndHashCode(callSuper = true)
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "user")
 @Builder(setterPrefix = "with")
-public class User extends AbClass{
+public class User {
 
 
     @Id
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(name = "userinformation")
     private String username;
-    @Column(name = "userInformation")
     private String name;
     private String email;
 }
