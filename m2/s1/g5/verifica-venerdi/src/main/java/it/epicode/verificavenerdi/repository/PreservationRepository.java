@@ -11,4 +11,5 @@ import java.util.List;
 public interface PreservationRepository extends JpaRepository<Preservation, Integer> {
     List<Preservation> findByUserAndDate(User user, LocalDate date);
     boolean existsByWorkstationAndDate(Workstation workstation, LocalDate date);
+    boolean existsByUserAndDate(User user,LocalDate date);
 }

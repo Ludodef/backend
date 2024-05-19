@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Service
 public class PreservationService {
@@ -33,5 +34,16 @@ public class PreservationService {
         preservation.setDate(date);
 
         return(PreservationRepository) preservationRepository.save(preservation);
+    }
+    public boolean isUserAlreadyReserved(User user, LocalDate dateReservation){
+        return preservationRepository.existsByUserAndDate(user, dateReservation);
+    }
+
+    public boolean isWorkstationAvailable(Workstation workstation, LocalDate dateReservation){
+        return !preservationRepository.existsByWorkstationAndDate(workstation, dateReservation);
+    }
+
+    public List<Preservation> reservationsByUserAndDate(User user, LocalDate dateReservation){
+        return preservationRepository.findByUserAndDate(user, dateReservation);
     }
 }

@@ -25,5 +25,6 @@ public class Preservation {
     @ManyToOne
     @JoinColumn(name = "workstation_id")
     private Workstation workstation;
+    @Column(name = "date_reservation")
     private LocalDate date;
 }
