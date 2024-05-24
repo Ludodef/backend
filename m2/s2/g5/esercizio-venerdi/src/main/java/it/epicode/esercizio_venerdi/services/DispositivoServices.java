@@ -8,11 +8,12 @@ import java.util.Optional;
 
 @Service
 public interface DispositivoServices {
-    List<Dispositivo> getDispositivo();
+    List<Dispositivo> getDispositivi();
     Optional<Dispositivo> getDispositivo(Long id);
     Dispositivo save(Dispositivo dispositivo);
-    Dispositivo update(Long dispositivoId, Dispositivo dispositivo);
-    Dispositivo delete(Long dispositivoId);
+    Optional<Dispositivo> update(Long dispositivoId, Dispositivo dispositivo);
+    Optional<Dispositivo> delete(Long dispositivoId);
     Dispositivo assegna(Long dispositivoId, Long dipendenteId);
+    Dispositivo rimuovi(Long dispositivoId, Long dipendenteId);
 
 }

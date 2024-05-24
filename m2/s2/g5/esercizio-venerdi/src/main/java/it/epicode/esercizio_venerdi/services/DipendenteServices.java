@@ -11,6 +11,6 @@ public interface DipendenteServices {
     List<Dipendente> getDipendenti();
     Optional<Dipendente> getDipendente(Long id);
     Dipendente save(Dipendente dipendente);
-    Dipendente update(Long dipendenteId, Dipendente dipendente);
-    Dipendente delete(Long dipendenteId);
+    Optional<Dipendente> update(Long dipendenteId, Dipendente dipendente);
+    Optional<Dipendente> delete(Long dipendenteId);
 }
