@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(setterPrefix = "with")
-public class Dispositivo extends BaseEntities {
+public class Dispositivo extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private DeviceType deviceType;
     @Enumerated(EnumType.STRING)
