@@ -29,7 +29,7 @@ public class UsersController {
     @PostMapping(value = "/register")
     public ResponseEntity<?> register(@RequestBody @Validated UserValidator userValid,
                                       BindingResult validation,
-                                      UriComponentBuilder uri){
+                                      UriComponentsBuilder uri){
         if(validation.hasErrors()){
             throw  new RuntimeException("User validation failed");
         }
