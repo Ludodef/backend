@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = false, onlyExplicitlyIncluded = true)
 @Entity
-@Table
+@Table(name = "roles")
 @Builder(setterPrefix = "with")
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,7 +20,7 @@ import java.util.List;
 public class RoleEntity extends BaseEntity{
     private String name;
 
-    @ManyToMany(mappedBy = "users")
+    @ManyToMany(mappedBy = "roles")
     private final List<User> users = new ArrayList<>();
 
 }

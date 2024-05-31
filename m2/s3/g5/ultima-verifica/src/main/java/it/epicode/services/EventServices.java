@@ -31,20 +31,22 @@ public class EventServices {
             return Optional.empty();
         }
     }
-    public User updateEvent(Event event,Long id){
+    public Event updateEvent(Event event,Long id){
         var foundedEvent = eventRepository.findById(id);
         if (foundedEvent.isPresent()){
             var definedEvent = foundedEvent.get();
-            return eventRepository.save(definedEvent.builder()
+            var updateEvent = definedEvent.builder()
 
                             .withData(event.getData())
                             .withDescrizione(event.getDescrizione())
-                            .withDisponibilita(event.setDisponibilita())
+                            .withDisponibilita(event.isDisponibilita())
                             .withLuogo(event.getLuogo())
                             .withPostiDisponibili(event.getPostiDisponibili())
                             .withPostiPrenotati(event.getPostiPrenotati())
                             .withTitolo(event.getTitolo())
-                    .build());
+                    .build();
+            updateEvent.setId(definedEvent.getId());
+            return eventRepository.save(updateEvent);
         }else {
             throw new RuntimeException("Invalid");
         }
